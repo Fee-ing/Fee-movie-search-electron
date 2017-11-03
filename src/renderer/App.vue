@@ -3,13 +3,13 @@
     <div class="app-left flexbox flex-column">
       <div class="search-wrapper centerVertical">
         <form class="search-form flexbox">
-          <select class="search-select" v-model="searchType">
+          <select class="search-select flex1" v-model="searchType">
             <option value="3">DiggBT</option>
             <option value="1">80s</option>
             <option value="2">韩饭</option>
           </select>
           <input type="text" name="keywords" class="search-input flex1" placeholder="想看什么就搜一搜吧" v-model="keywords">
-          <a class="search-btn centerVertical" @click="searchOpt">搜索</a>
+          <a class="search-btn centerVertical flex1" @click="searchOpt">搜索</a>
         </form>
       </div>
       <div class="weblist-wrapper flex1">
@@ -190,6 +190,7 @@ html, body, #app{
     .search-wrapper{
       height: 70px;
       .search-form{
+        width: 100%;
         height: 40px;
         border: 1px solid #ccc;
         .search-select, .search-input{
@@ -199,11 +200,11 @@ html, body, #app{
           outline: none;
           background-color: transparent;
         }
-        .search-input{
-          width: 130px;
+        .search-select{
+          width: 80px;
         }
         .search-btn{
-          padding: 0 8px;
+          width: 40px;
           font-size: 12px;
           &:hover{
             color: #000;
@@ -215,23 +216,24 @@ html, body, #app{
       overflow-y: auto;
       h2{
         font-size: 14px;
+        font-weight: normal;
         position: relative;
         .clear-all{
           position: absolute;
           right: 0px;
           top: 0px;
           font-weight: normal;
-          font-size: 13px;
+          font-size: 12px;
           padding: 1px 3px;
         }
       }
       p{
-        font-size: 14px;
+        font-size: 12px;
         margin-top: 10px;
         margin-left: 10px;
       }
       .history-wrapper{
-        font-size: 14px;
+        font-size: 12px;
         .history-item{
           display: block;
           margin-left: 10px;
@@ -300,15 +302,15 @@ html, body, #app{
           }
         }
       }
-      h2 span{
+      h2{
         font-weight: normal;
-        font-size: 13px;
-        margin-left: 15px;
+        font-size: 18px;
       }
       .init-home{
         position: absolute;
         right: 15px;
         bottom: 15px;
+        font-size: 12px;
       }
     }
     .web-wrapper{
