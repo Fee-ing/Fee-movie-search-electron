@@ -4,9 +4,9 @@
       <div class="search-wrapper centerVertical">
         <form class="search-form flexbox">
           <select class="search-select" v-model="searchType">
-            <option value="3">老司机搜索</option>
-            <option value="1">80s搜索</option>
-            <option value="2">韩饭搜索</option>
+            <option value="3">DiggBT</option>
+            <option value="1">80s</option>
+            <option value="2">韩饭</option>
           </select>
           <input type="text" name="keywords" class="search-input flex1" placeholder="想看什么就搜一搜吧" v-model="keywords">
           <a class="search-btn centerVertical" @click="searchOpt">搜索</a>
@@ -34,10 +34,11 @@
       <div class="web-wrapper flex1">
         <div class="tip-wrapper" v-show="showTip">
           <h2>提示：</h2>
-          <h3>1、老司机搜索功能强大，任何你搜的资源，它都不会让你失望的</h3>
-          <h3>2、80s搜索主要是各种电影电视综艺动漫等资源</h3>
-          <h3>3、韩饭搜索主要涉及韩剧、韩综等</h3>
-          <h3>4、建议使用老司机搜索，不然容易造成卡顿白屏（待优化）</h3>
+          <h3>1、DiggBT-免费的BT种子搜索神器、P2P种子搜索器、万能BT种子搜索下载神器、磁力链接搜索下载。</h3>
+          <h3>2、80s-高清手机电影迅雷下载_最新MP4电视剧磁力下载</h3>
+          <h3>3、韩饭-韩国娱乐新闻、综艺、KPOP、韩剧</h3>
+          <h3>4、推荐使用DiggBT搜索</h3>
+          <h3>5、使用80s搜索或者韩饭搜索时，有时会出现白屏现象，程序性能待优化</h3>
         </div>
         <div class="load-wrapper" v-show="!isLoad"></div>
         <div class="transform-wrapper" v-show="isLoad" 
@@ -322,12 +323,14 @@ html, body, #app{
       .tip-wrapper{
         height: 100%;
         text-align: left;
-        padding: 0 10%;
+        padding: 0 8%;
         h2{
-          margin-top: 10%;
+          margin-top: 8%;
+          font-weight: normal;
         }
         h3{
           margin-top: 20px;
+          font-weight: normal;
         }
       }
       .transform-wrapper{

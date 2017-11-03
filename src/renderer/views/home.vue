@@ -1,20 +1,18 @@
 <template>
   <div class="web-movie-home">
-    <template v-if="searchType === '1'">
-      <template v-if="searchData.search80sData.length > 0">
-        <h2 class="movie-title">80s搜索结果</h2>
-        <div class="block-wrapper">
-          <a class="block-item block-item1" v-for="item in searchData.search80sData" :title="item.title" @click="goDetail(item.href, '1')">
-            <div class="item-poster equalHeight">
-              <img :src="item.poster">
-            </div>
-            <h4 class="item-title">{{item.title}}</h4>
-            <h5 class="item-subTitle">{{item.subTitle}}</h5>
-          </a>
-        </div>
-      </template>
+    <template v-if="searchType === '1' && searchData.search80sData.length > 0">
+      <h2 class="movie-title">80s搜索结果</h2>
+      <div class="block-wrapper">
+        <a class="block-item block-item1" v-for="item in searchData.search80sData" :title="item.title" @click="goDetail(item.href, '1')">
+          <div class="item-poster equalHeight">
+            <img :src="item.poster">
+          </div>
+          <h4 class="item-title">{{item.title}}</h4>
+          <h5 class="item-subTitle">{{item.subTitle}}</h5>
+        </a>
+      </div>
     </template>
-    <template v-if="searchType === '2' && searchData.searchHfData && searchData.searchHfData.data.length > 0">
+    <template v-else-if="searchType === '2' && searchData.searchHfData && searchData.searchHfData.data.length > 0">
       <h2 class="movie-title">韩饭网搜索结果</h2>
       <div class="block-wrapper">
         <a class="block-item block-item2" v-for="item in searchData.searchHfData.data" :title="item.title" @click="goDetail(item.href, '2')">
@@ -32,7 +30,7 @@
         </div>
       </div>
     </template>
-    <template v-if="searchType === '3' && searchData.searchDtData && searchData.searchDtData.data.length > 0">
+    <template v-else-if="searchType === '3' && searchData.searchDtData && searchData.searchDtData.data.length > 0">
       <h2 class="movie-title">DiggBT搜索结果</h2>
       <div class="list-wrapper">
         <table border="1" cellspacing="0" cellpadding="0">
@@ -75,11 +73,9 @@
         </div>
       </div>
     </template>
-    <template v-if="searchData.search80sData || searchData.searchHfData || searchData.searchDtData">
-      <div class="no-result centerVertical" v-if="searchData.search80sData.length <= 0 || searchData.searchHfData.data.length <= 0 || searchData.searchDtData.data.length <= 0">
-        <p>很抱歉，没有找到您想要的结果</p>
-      </div>
-    </template>
+    <div class="no-result centerVertical" v-else>
+      <p>很抱歉，没有找到您想要的结果</p>
+    </div>
   </div>
 </template>
 
