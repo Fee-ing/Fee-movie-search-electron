@@ -7,6 +7,7 @@
 
 ## 预览图
 #### Fee's Movie
+![home](https://github.com/Fee-ing/previewImages/blob/master/Fee-movie-search/home.png)
 ![result](https://github.com/Fee-ing/previewImages/blob/master/Fee-movie-search/result.png)
 
 ## Build Setup
