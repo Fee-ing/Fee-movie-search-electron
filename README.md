@@ -3,7 +3,7 @@
 > 迷你版Fee-movie
 
 ## windows安装包
-下载地址： [Fee's Movie](http://pan.baidu.com/s/1c98I4Y)
+下载地址： [Fee's Movie](https://pan.baidu.com/s/1dFfaB0d)
 
 ## 预览图
 #### Fee's Movie
