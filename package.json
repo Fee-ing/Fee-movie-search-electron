@@ -1,6 +1,6 @@
 {
-  "name": "FeeMovie",
-  "version": "1.0.1",
+  "name": "FeeMovieSearch",
+  "version": "1.0.0",
   "author": "2809750987@qq.com",
   "description": "电影资源，应有尽有",
   "license": "MIT",
@@ -21,8 +21,8 @@
     "postinstall": "npm run lint:fix"
   },
   "build": {
-    "productName": "FeeMovie",
-    "appId": "org.yrq110.dod",
+    "productName": "FeeMovieSearch",
+    "appId": "org.fee.moviesearch",
     "directories": {
       "output": "build"
     },

@@ -23,7 +23,6 @@ function createWindow () {
     height: 700,
     width: 1100,
     useContentSize: true,
-    // transparent: true,
     frame: false,
     resizable: false,
     fullscreen: false,
