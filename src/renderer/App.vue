@@ -57,7 +57,7 @@
   import { mapGetters, mapActions, mapMutations } from 'vuex'
   import { ipcRenderer } from 'electron'
 
-  import './assets/js/clipboard.min.js'
+  import Clipboard from 'clipboard'
   import FUNC from './assets/js/common.js'
 
   export default {
@@ -75,9 +75,8 @@
     mounted () {
       let that = this
 
-      document.onkeydown = function (event) {
-        var e = event || window.event || arguments.callee.caller.arguments[0]
-        if (e && e.keyCode==13) {
+      document.onkeydown = function (e) {
+        if (e && e.keyCode === 13) {
           that.searchOpt()
         }
       }
@@ -85,12 +84,12 @@
       let clipboard = new Clipboard('.copy-btn')
 
       clipboard.on('success', function (e) {
-          FUNC.toast('复制链接成功')
-          e.clearSelection()
+        FUNC.toast('复制链接成功')
+        e.clearSelection()
       })
 
       clipboard.on('error', function (e) {
-          FUNC.toast('复制链接失败')
+        FUNC.toast('复制链接失败')
       })
     },
     methods: {
@@ -110,7 +109,7 @@
         this.changeShowTip(true)
       },
       saveHistory (keywords) {
-        for (let i = 0, len = this.historyList.length; i < len; i ++) {
+        for (let i = 0, len = this.historyList.length; i < len; i++) {
           if (keywords === this.historyList[i]) {
             this.historyList.splice(i, 1)
             break

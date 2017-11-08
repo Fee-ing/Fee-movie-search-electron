@@ -61,6 +61,7 @@
     "vue-electron": "",
     "vue-router": "^2.5.3",
     "vuex": "^3.0.0",
+    "clipboard": "^1.7.1",
     "cheerio": "^0.22.0",
     "superagent": "^3.8.0",
     "superagent-charset": ""
